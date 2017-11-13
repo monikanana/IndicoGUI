@@ -7,6 +7,7 @@
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="wholeWindow" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imageGUI.Main">
    <children>
@@ -19,7 +20,7 @@
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <SplitPane dividerPositions="0.8097880928355197" layoutX="99.0" layoutY="218.0" orientation="VERTICAL" prefHeight="398.4" prefWidth="470.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <SplitPane dividerPositions="0.9942991281019451" layoutX="99.0" layoutY="218.0" orientation="VERTICAL" prefHeight="398.4" prefWidth="470.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <items>
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
                            <children>
@@ -27,8 +28,26 @@
                                 <items>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
-                                          <ImageView fx:id="imageView" fitHeight="291.0" fitWidth="368.0" layoutX="8.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true" />
-                                          <Label fx:id="fileNameMessage" layoutX="62.0" layoutY="39.0" prefHeight="40.0" prefWidth="274.0" />
+                                          <ImageView fx:id="imageView" fitHeight="282.0" layoutX="8.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true" />
+                                          <Label fx:id="fileNameMessage" alignment="TOP_CENTER" layoutX="62.0" layoutY="39.0" prefHeight="40.0" prefWidth="274.0" textOverrun="CLIP">
+                                             <font>
+                                                <Font name="BebasNeue" size="16.0" />
+                                             </font></Label>
+                                          <Button layoutX="27.0" layoutY="444.0" mnemonicParsing="false" onAction="#changeDirectory" prefHeight="40.0" prefWidth="138.0" text="Choose directory">
+                                             <font>
+                                                <Font name="BebasNeue" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="199.0" layoutY="444.0" mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="120.0" text="Reset chart">
+                                             <font>
+                                                <Font name="BebasNeue" size="16.0" />
+                                             </font>
+                                          </Button>
+                                          <Button onAction="#group" layoutX="55.0" layoutY="513.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="222.0" text="Group images from this directory">
+                                             <font>
+                                                <Font name="BebasNeue" size="16.0" />
+                                             </font>
+                                          </Button>
                                        </children></AnchorPane>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                                        <children>
@@ -39,13 +58,7 @@
                               </SplitPane>
                            </children>
                         </AnchorPane>
-                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-                           <children>
-                              <Button fx:id="changeDirectoryButton" layoutX="84.0" layoutY="42.0" mnemonicParsing="false" onAction="#changeDirectory" prefHeight="40.0" prefWidth="120.0" text="Change directory" />
-                              <Button fx:id="resetButton" layoutX="309.0" layoutY="42.0" mnemonicParsing="false" onAction="#reset" prefHeight="40.0" prefWidth="80.0" text="Reset chart" />
-                              <Button fx:id="groupButton" layoutX="490.0" layoutY="42.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="211.0" text="Group images from this directory" />
-                           </children>
-                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
                     </items>
                   </SplitPane>
                </children>
